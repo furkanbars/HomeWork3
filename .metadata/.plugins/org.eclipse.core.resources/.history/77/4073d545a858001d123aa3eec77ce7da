@@ -1,0 +1,5 @@
+package kodlama.io.Demo.dataAccess.abstracts.jdbc;
+
+public interface IJdbcTeacherDao {
+
+}

@@ -1,0 +1,33 @@
+package kodlama.io.Demo;
+
+import java.util.List;
+
+import kodlama.io.Demo.business.abstracts.CategoryService;
+import kodlama.io.Demo.business.abstracts.TeacherService;
+import kodlama.io.Demo.business.concretes.CategoryManager;
+import kodlama.io.Demo.business.concretes.TeacherManager;
+import kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcCategoryDao;
+import kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcTeacherDao;
+import kodlama.io.Demo.entities.concretes.Category;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class Main {
+
+	public static void main(String[] args) {
+		CategoryService categoryService = new CategoryManager(new JdbcCategoryDao());
+		List<Category> categories = categoryService.getAll();
+		for(Category category:categories) {
+			System.out.println(category.getName());
+		}
+		
+		TeacherService teacherService = new TeacherManager(new JdbcTeacherDao());
+		List<Teacher> teachers=teacherService.getAll();
+		for(Teacher teacher:teachers) {
+			System.out.println(teacher.getFirstName()+" "+teacher.getLastName());
+		}
+		
+		
+		//Category category = new Category(3,"Mobil Programlama","Güzel Eğitim");
+		//categoryService.add(category);
+	}
+}

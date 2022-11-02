@@ -1,0 +1,13 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateTeacherDao;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class HibernateTeacherDao implements IHibernateTeacherDao {
+
+	@Override
+	public void add(Teacher teacher) {
+		System.out.println(teacher.getFirstName()+" hibernate kullanılarak veri tabanına eklendi.");
+	}
+
+}

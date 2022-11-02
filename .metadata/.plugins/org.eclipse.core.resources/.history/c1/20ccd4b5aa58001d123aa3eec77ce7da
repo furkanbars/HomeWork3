@@ -1,0 +1,40 @@
+package kodlama.io.Demo.dataAccess.concretes.jdbc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.jdbc.IJdbcTeacherDao;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class JdbcTeacherDao implements IJdbcTeacherDao{
+
+	private List<Teacher> teachers;
+	
+	public JdbcTeacherDao() {
+		this.teachers = new ArrayList<Teacher>();
+		this.teachers.add(new Teacher(1,"Engin","Demiroğ","Something"));
+		this.teachers.add(new Teacher(2,"Ali","Yıldırım","Something"));
+	}
+	
+	@Override
+	public void add(Teacher teacher) {
+		this.teachers.add(teacher);
+		System.out.println(teacher.getFirstName()+" "+teacher.getLastName()+" jdbc kullanılarak veri tabanına eklendi.");
+	}
+
+	@Override
+	public List<Teacher> getAll() {
+		return this.teachers;
+	}
+
+	@Override
+	public Teacher getById(int id) {
+		for(Teacher teacher:teachers) {
+			if (teacher.getId()==id) {
+				return teacher;
+			}
+		}
+		return null;
+	}
+
+}

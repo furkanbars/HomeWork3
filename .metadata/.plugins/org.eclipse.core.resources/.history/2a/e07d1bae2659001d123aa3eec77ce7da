@@ -1,0 +1,5 @@
+package kodlama.io.Demo.business.concretes;
+
+public class CourseManager {
+
+}

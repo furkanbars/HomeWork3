@@ -1,0 +1,7 @@
+package kodlama.io.Demo.dataAccess.abstracts.hibernate;
+
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public interface IHibernateTeacherDao{
+	 void add(Teacher teacher);
+}

@@ -1,0 +1,46 @@
+package kodlama.io.Demo.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.Demo.business.abstracts.TeacherService;
+import kodlama.io.Demo.dataAccess.abstracts.TeacherDao;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class TeacherManager implements TeacherService{
+
+	private TeacherDao teacherDao;
+	
+	public TeacherManager(TeacherDao teacherDao) {
+		this.teacherDao = teacherDao;
+	}
+	
+	@Override
+	public void add(Teacher teacher) {
+		if(this.isExist(teacher.getFirstName(), teacher.getLastName())) {
+			System.out.println("Bu isim ve soyisimde zaten eğitici mevcut.");
+			return;
+		}
+		this.teacherDao.add(teacher);
+	}
+
+	@Override
+	public List<Teacher> getAll() {
+		return this.teacherDao.getAll();
+	}
+
+	@Override
+	public Teacher getById(int id) {
+		return this.teacherDao.getById(id);
+	}
+	
+	private boolean isExist(String firstName,String lastName) {
+		for(Teacher myTeacher:this.getAll()) {
+			if(myTeacher.getFirstName().toUpperCase().equalsIgnoreCase(firstName) &&
+					myTeacher.getLastName().toUpperCase().equalsIgnoreCase(lastName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+}

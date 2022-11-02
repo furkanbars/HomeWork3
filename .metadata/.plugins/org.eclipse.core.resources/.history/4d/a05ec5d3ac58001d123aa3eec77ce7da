@@ -1,0 +1,28 @@
+package kodlama.io.Demo.dataAccess.concretes.jdbc;
+
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.jdbc.IJdbcCategoryDao;
+import kodlama.io.Demo.entities.concretes.Category;
+
+public class JdbcCategoryDao implements IJdbcCategoryDao{
+
+	@Override
+	public void add(Category category) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Category> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

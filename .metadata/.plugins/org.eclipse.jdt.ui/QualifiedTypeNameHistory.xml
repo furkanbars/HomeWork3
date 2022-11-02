@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.BaseDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateTeacherDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.hibernate.HibernateCourseDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCourseDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCategoryDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.jdbc.IJdbcTeacherDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.jdbc.IJdbcCategoryDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.DatabaseTeacher"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.DatabaseCategory"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.DatabaseCourse"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.entities.concretes.Course"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.CategoryDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.abstracts.CategoryService"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.concretes.CategoryManager"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcCategoryDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.entities.concretes.Category"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.abstracts.TeacherService"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.concretes.TeacherManager"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.entities.concretes.Teacher"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.TeacherDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.hibernate.HibernateTeacherDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcTeacherDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.abstracts.CourseService"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.abstracts.CourseDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.business.concretes.CourseManager"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcCourseDao"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.core.logging.ILogger"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kodlama.io.Demo.core.logging.Logger"/>
+</qualifiedTypeNameHistroy>

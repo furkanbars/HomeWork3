@@ -1,0 +1,40 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCategoryDao;
+import kodlama.io.Demo.entities.concretes.Category;
+
+public class HibernateCategoryDao implements IHibernateCategoryDao{
+
+	private List<Category> categories;
+	
+	public HibernateCategoryDao() {
+		this.categories = new ArrayList<Category>();
+		this.categories.add(new Category(1,"Backend Programlama","Backend Programlama Öğreniyoruz"));
+		this.categories.add(new Category(2,"Frontend Programlama","Frontend Programlama Öğreniyoruz"));
+	}
+	
+	@Override
+	public void add(Category category) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Category> getAll() {
+		return this.categories;
+	}
+
+	@Override
+	public Category getById(int id) {
+		for(Category category:categories) {
+			if(category.getId()==id) {
+				return category;
+			}
+		}
+		return null;
+	}
+
+}

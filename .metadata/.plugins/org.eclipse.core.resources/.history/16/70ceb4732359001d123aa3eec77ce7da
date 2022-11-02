@@ -1,0 +1,40 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCourseDao;
+import kodlama.io.Demo.dataAccess.concretes.DatabaseCourse;
+import kodlama.io.Demo.entities.concretes.Course;
+
+public class HibernateCourseDao implements IHibernateCourseDao{
+	
+	private DatabaseCourse courses;
+	
+	public HibernateCourseDao() {
+		this.courses=new DatabaseCourse();
+	}
+	
+	@Override
+	public void add(Course course) {
+		if (this.courses.add(course)) {
+			System.out.println(course.getName()+" Hibernate kullanılarak veri tabanına eklendi.");
+		}
+	}
+
+	@Override
+	public List<Course> getAll() {
+		return this.courses;
+	}
+
+	@Override
+	public Course getById(int id) {
+		for(Course course:courses) {
+			if(course.getId()==id) {
+				return course;
+			}
+		}
+		return null;
+	}
+
+}

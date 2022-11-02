@@ -1,0 +1,8 @@
+package kodlama.io.Demo.dataAccess.abstracts.hibernate;
+
+import kodlama.io.Demo.dataAccess.abstracts.BaseDao;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public interface HibernateTeacherDao extends BaseDao{
+	 void add(Teacher teacher);
+}

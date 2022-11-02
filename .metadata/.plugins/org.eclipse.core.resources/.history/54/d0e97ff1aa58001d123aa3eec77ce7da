@@ -1,0 +1,5 @@
+package kodlama.io.Demo.dataAccess.concretes;
+
+public class DatabaseCategory {
+
+}

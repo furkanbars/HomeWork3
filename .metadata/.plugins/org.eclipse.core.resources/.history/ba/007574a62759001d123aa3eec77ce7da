@@ -1,0 +1,48 @@
+package kodlama.io.Demo.business.concretes;
+
+import java.util.List;
+
+import kodlama.io.Demo.business.abstracts.CategoryService;
+import kodlama.io.Demo.dataAccess.abstracts.CategoryDao;
+import kodlama.io.Demo.entities.concretes.Category;
+
+public class CategoryManager implements CategoryService{
+
+	private CategoryDao categoryDao;
+	
+	public CategoryManager(CategoryDao categoryDao) {
+		this.categoryDao=categoryDao;
+	}
+	
+	@Override
+	public void add(Category category) {
+		if (this.isExits(category.getName())) {
+			System.out.println("Kategori zaten mevcut.");
+			return;
+		}
+		this.categoryDao.add(category);
+	}
+
+	@Override
+	public List<Category> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	private boolean isExits(String categoryName) {
+		for(Category category:this.getAll()) {
+			if (category.getName().toUpperCase().equalsIgnoreCase(categoryName)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+}

@@ -1,0 +1,12 @@
+package kodlama.io.Demo;
+
+import kodlama.io.Demo.business.abstracts.CategoryService;
+import kodlama.io.Demo.business.concretes.CategoryManager;
+import kodlama.io.Demo.dataAccess.concretes.jdbc.JdbcCategoryDao;
+
+public class Main {
+
+	public static void main(String[] args) {
+		CategoryService categoryService = new CategoryManager(new JdbcCategoryDao());
+	}
+}

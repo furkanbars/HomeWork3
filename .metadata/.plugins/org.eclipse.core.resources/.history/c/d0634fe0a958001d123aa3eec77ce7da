@@ -1,0 +1,13 @@
+package kodlama.io.Demo.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public enum TeachersEnum {;
+	public List<Teacher> teachers;
+	TeachersEnum() {
+		this.teachers=ArrayList<Teacher>();
+	}
+}

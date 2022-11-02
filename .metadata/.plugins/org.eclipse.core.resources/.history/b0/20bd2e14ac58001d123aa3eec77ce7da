@@ -1,0 +1,42 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCategoryDao;
+import kodlama.io.Demo.dataAccess.concretes.DatabaseCategory;
+import kodlama.io.Demo.entities.concretes.Category;
+
+public class HibernateCategoryDao implements IHibernateCategoryDao{
+
+	private DatabaseCategory categories;
+	
+	public HibernateCategoryDao() {
+		categories=new DatabaseCategory();
+	}
+	
+	@Override
+	public void add(Category category) {
+		if (this.categories.add(category)) {
+			System.out.println(category.getName()+" Hibernate kullanılarak veri tabanına eklenmiştir.");
+			return;
+		}
+		System.out.println("Bir şeyler ters gitti.");
+	}
+
+	@Override
+	public List<Category> getAll() {
+		return this.categories;
+	}
+
+	@Override
+	public Category getById(int id) {
+		for(Category category:categories) {
+			if(category.getId()==id) {
+				return category;
+			}
+		}
+		return null;
+	}
+
+}

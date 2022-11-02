@@ -1,0 +1,11 @@
+package kodlama.io.Demo.dataAccess.abstracts.jdbc;
+
+import java.util.List;
+
+import kodlama.io.Demo.entities.concretes.Category;
+
+public interface IJdbcCategoryDao {
+	void add(Category category);
+	List<Category> getAll();
+	Category getById(int id);
+}

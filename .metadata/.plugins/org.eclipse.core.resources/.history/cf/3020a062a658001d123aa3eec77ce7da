@@ -1,0 +1,7 @@
+package kodlama.io.Demo.dataAccess.abstracts.hibernate;
+
+import kodlama.io.Demo.entities.concretes.Course;
+
+public interface IHibernateCourse {
+	void add(Course course);
+}

@@ -1,0 +1,5 @@
+package kodlama.io.Demo.entities.concretes;
+
+public class Category {
+
+}

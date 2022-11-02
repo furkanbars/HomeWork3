@@ -1,0 +1,31 @@
+package kodlama.io.Demo.dataAccess.concretes.jdbc;
+
+import java.util.List;
+
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class JdbcTeacherDao implements kodlama.io.Demo.dataAccess.abstracts.jdbc.IJdbcTeacherDao{
+
+	private List<Teacher> tachers;
+	
+	public IJ
+	
+	@Override
+	public void add(Teacher teacher) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Teacher> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Teacher getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

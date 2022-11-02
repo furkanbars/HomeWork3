@@ -1,0 +1,14 @@
+package kodlama.io.Demo.dataAccess.concretes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.entities.concretes.Course;
+
+public class DatabaseCourse {
+	private List<Course> courses;
+	public DatabaseCourse() {
+		this.courses=new ArrayList<Course>();
+		
+	}
+}

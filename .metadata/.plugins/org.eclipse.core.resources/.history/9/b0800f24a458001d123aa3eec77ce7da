@@ -1,0 +1,7 @@
+package kodlama.io.Demo.dataAccess.abstracts.hibernate;
+
+import kodlama.io.Demo.dataAccess.abstracts.BaseDao;
+
+public interface JdbcTeacherDao extends BaseDao{
+
+}

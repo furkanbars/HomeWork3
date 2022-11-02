@@ -1,0 +1,37 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateCourseDao;
+import kodlama.io.Demo.entities.concretes.Course;
+
+public class HibernateCourseDao implements IHibernateCourseDao{
+	
+	private List<Course> courses;
+	
+	public HibernateCourseDao() {
+		this.courses=new ArrayList<Course>();
+		this.courses.add(new Course(1,"C#",1,1,10));
+		this.courses.add(new Course(2,"Java",1,1,15));
+	}
+	
+	@Override
+	public boolean add(Course course) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List<Course> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Course getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

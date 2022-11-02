@@ -1,0 +1,5 @@
+package kodlama.io.Demo.business.abstracts;
+
+public class CategoryService {
+
+}

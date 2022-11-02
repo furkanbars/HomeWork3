@@ -1,0 +1,11 @@
+package kodlama.io.Demo.dataAccess.abstracts.hibernate;
+
+import java.util.List;
+
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public interface IHibernateTeacherDao{
+	 boolean add(Teacher teacher);
+	 List<Teacher> getAll();
+	 Teacher getById(int id);
+}

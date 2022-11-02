@@ -1,0 +1,36 @@
+package kodlama.io.Demo.dataAccess.concretes.hibernate;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import kodlama.io.Demo.dataAccess.abstracts.hibernate.IHibernateTeacherDao;
+import kodlama.io.Demo.entities.concretes.Teacher;
+
+public class HibernateTeacherDao implements IHibernateTeacherDao {
+	
+	private List<Teacher> teacher;
+	
+	public HibernateTeacherDao() {
+		this.teacher = new ArrayList<Teacher>();
+		this.teacher.add(new Teacher(1,"Engin","Demiroğ","Something"));
+		this.teacher.add(new Teacher(2,"Ali","Yıldırım","Something"));
+	}
+
+	@Override
+	public void add(Teacher teacher) {
+		System.out.println(teacher.getFirstName()+" hibernate kullanılarak veri tabanına eklendi.");
+	}
+
+	@Override
+	public List<Teacher> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Teacher getById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
